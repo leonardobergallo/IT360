@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Monitor, Laptop, Mouse, Keyboard, Wifi, Printer, HardDrive, Cpu } from "lucide-react"
+import { PaymentButton } from "@/components/payment/payment-button"
 import Link from "next/link"
 
 const products = [
   {
-    id: 1,
+    id: "1",
     name: "PC Gamer Armada",
     description: "Intel i5, 16GB RAM, GTX 1660, SSD 500GB",
     price: 450000,
@@ -15,7 +16,7 @@ const products = [
     icon: Monitor
   },
   {
-    id: 2,
+    id: "2",
     name: "Notebook HP Pavilion",
     description: "Intel i3, 8GB RAM, SSD 256GB, 15.6\"",
     price: 280000,
@@ -25,7 +26,7 @@ const products = [
     icon: Laptop
   },
   {
-    id: 3,
+    id: "3",
     name: "Mouse Gaming RGB",
     description: "6 botones, 12000 DPI, RGB personalizable",
     price: 15000,
@@ -35,7 +36,7 @@ const products = [
     icon: Mouse
   },
   {
-    id: 4,
+    id: "4",
     name: "Teclado Mecánico",
     description: "Switches Blue, RGB, teclas numéricas",
     price: 25000,
@@ -45,7 +46,7 @@ const products = [
     icon: Keyboard
   },
   {
-    id: 5,
+    id: "5",
     name: "Router WiFi 6",
     description: "Dual Band, 3000Mbps, 4 antenas",
     price: 35000,
@@ -55,7 +56,7 @@ const products = [
     icon: Wifi
   },
   {
-    id: 6,
+    id: "6",
     name: "Impresora Multifunción",
     description: "Láser, WiFi, escáner, copiadora",
     price: 85000,
@@ -65,7 +66,7 @@ const products = [
     icon: Printer
   },
   {
-    id: 7,
+    id: "7",
     name: "Disco Externo 2TB",
     description: "USB 3.0, portátil, compatible con PC/Mac",
     price: 18000,
@@ -75,7 +76,7 @@ const products = [
     icon: HardDrive
   },
   {
-    id: 8,
+    id: "8",
     name: "Procesador Intel i7",
     description: "10ma generación, 8 núcleos, 4.9GHz",
     price: 120000,
@@ -150,18 +151,7 @@ export default function ProductosPage() {
                     <p className="text-sm text-gray-500 mb-4">
                       Stock: {product.stock} unidades
                     </p>
-                    <div className="flex gap-2">
-                      <Button asChild className="flex-1">
-                        <Link href={`/productos/${product.id}`}>
-                          Ver Detalles
-                        </Link>
-                      </Button>
-                      <Button variant="outline" asChild>
-                        <a href="https://wa.me/5491112345678">
-                          Consultar
-                        </a>
-                      </Button>
-                    </div>
+                    <PaymentButton product={product} />
                   </CardContent>
                 </Card>
               )
