@@ -27,3 +27,7 @@ out/
 
 # Cache
 .cache/ 
+# BFG reports
+*.bfg-report*
+cache-stats.txt
+object-id-map.old-new.txt
