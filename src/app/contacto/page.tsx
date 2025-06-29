@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -536,3 +537,6 @@ export default function ContactoPage() {
     </main>
   )
 } 
+=======
+ 
+>>>>>>> 66161e13ab516d24af33f4551f88e1298d3ce09d
